@@ -1,0 +1,285 @@
+---
+title: "Chapter 7: Survey Sampling and Inference"
+subtitle: "COR 142 C"
+author: "Dr. Kao"
+format: 
+  html:
+    toc: true
+    toc-location: right
+    embed-resources: true
+    css: styles.css
+    lightbox: true
+    link-external-icon: true
+    link-external-newwindow: true
+---
+
+```{r}
+#| include: false
+
+library(dplyr)
+
+library(ggplot2)
+
+library(janitor)
+
+library(palmerpenguins)
+
+library(plotly)
+
+library(crosstalk)
+
+library(shiny)
+
+library(scales)
+```
+
+## Introduction to Surveys
+
+:::{.callout-note appearance="default" icon='false'}
+# Survey Terminology
+
+* A [**population**]{style='color:red'} is a group of objects or people we wish to study.
+* A [**parameter**]{style='color:red'} is a numerical value that characterizes some aspect of the population.
+* A [**census**]{style='color:red'} is a survey which measures [**every member**]{style='color:red'} of the population.
+* A [**sample**]{style='color:red'} is a sub-collection of objects or people taken from the population of interest.
+* A [**statistic**]{style='color:red'} is a numerical characteristic of the sampled data; it is sometimes called an [**estimator**]{style='color:red'}, and the numerical results are called the [**estimates**]{style='color:red'}.
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 7.1.1.
+
+::::{.panel-tabset}
+# Question
+
+Data is gathered on the heights of all NBA basketball players. The mean of the data is calculated.
+
+a. The _________ is all NBA players.
+b. The _________ is the mean height of all NBA players.
+
+# Answer
+
+a. The [**population**]{style='color:red'} is all NBA players.
+b. The [**parameter**]{style='color:red'} is the mean height of all NBA players.
+::::
+:::
+
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 7.1.2.
+
+::::{.panel-tabset}
+# Question
+
+A researcher is interested in studying the heights of American women. She takes a random sample of 1,500 American women and finds the mean height of the sample is 63.6 inches.
+
+a. The _________ is the 1,500 American surveyed.
+b. The _________ is the sample mean of 63.6 inches. The researcher may _________ that the average American woman is 63.6 inches tall.
+
+# Answer
+
+
+a. The [**sample**]{style='color:red'} is the 1,500 American surveyed.
+b. The [**statistic**]{style='color:red'} is the sample mean of 63.6 inches. The researcher may [**estimate**]{style='color:red'} that the average American woman is 63.6 inches tall.
+::::
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Statistical Inference
+
+* [**Statistical inference**]{style='color:red'} is the science of drawing conclusions about a population based on observing characteristics of samples.
+* Statistical inference involves uncertainty because the entire population is not being measured.
+* An important component of statistical inference is [**measuring the uncertainty**]{style='color:red'}.
+:::
+
+:::{.callout-note appearance='default' icon='false'}
+# Statistics vs. Parameters
+
+* Statistics are [**measurable**]{style='color:red'}---any time we collect data, we find the value of a statistic.
+* Parameters are typically [**unobservable**]{style='color:red'}---they can be estimated with statistics, but these estimates will involve some degree of certainty.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Notation
+
+In general, Greek letters are used to represent population parameters, whereas Latin letters are used to represent statistics.
+
+| Statistics (based on sample data) | Symbol | Parameters (typically unknown) | Symbol |
+|-----------------------------------|---|--------------------------------|---|
+| Sample Mean | [$\overline{x}$]{style='color:red'} | Population Mean | [$\mu$]{style='color:red'} |
+| Sample Standard Deviation | [$s$]{style='color:red'} | Population Standard Deviation | [$\sigma$]{style='color:red'} |
+| Sample Variance | [$s^2$]{style='color:red'} | Population Variance | [$\sigma^2$]{style='color:red'} |
+| Sample Proportion | [$\hat{p}$]{style='color:red'} | Population Proportion | [$p$]{style='color:red'} |
+: {.striped}
+
+::: 
+
+::: {.callout-tip appearance="default" icon="true"}
+# Example 7.1.3.
+
+::::{.panel-tabset}
+# Question
+
+The mean GPA of all 5,000 students at Uneeda College is 2.78. A sample of 50 GPAs from this college has a mean of 2.93.
+
+a. What is the population?
+b. What is the sample?
+c. What value is the parameter? What symbol do we use to represent this value?
+d. What value is the statistic? What symbol do we use to represent this value?
+
+# Answer
+
+[a. The population is all 5,000 students at Uneeda College.]{style='color:red'}<br>
+[b. The sample consists of the 50 students whose GPAs were recorded.]{style='color:red'}<br>
+[c. The parameter is the mean GPA of 2.78; we write $\mu = 2.78$.]{style='color:red'}<br>
+[d. The statistic is the mean GPA of 2.93; we write $\bar{x} = 2.93$.]{style='color:red'}
+::::
+:::
+
+
+:::{.callout-note appearance="default" icon='false'}
+# Bias
+
+A survey method is [**biased**]{style='color:red'} if it has a tendency to produce an inaccurate or untrue value. There are three common types of bias:
+
+* [**Measurement**]{style='color:red'} bias
+* [**Sampling**]{style='color:red'} bias
+* [**Estimator bias**]{style="color:red"}---the use of an estimator that is biased
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Measurement Bias
+
+1. Results from asking questions that do not [**produce a true answer**]{style='color:red'}; occurs when measurements tend to record values larger or smaller than the true value.
+2. Sources of measurement bias:
+  - [**Self reporting data**]{style='color:red'}
+  - [**Confusing or leading survey questions**]{style='color:red'}
+  - [**Non-neutral survey questions**]{style='color:red'}
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Sampling Bias
+
+Sampling bias occurs when a sample is used that is [**not representative**]{style='color:red'} of the population.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Questions to Ask About Sampling
+
+1. What percentage of people who were asked to participate actually did so?
+2. Did the researchers select the participants, or did the individuals choose to participate themselves?
+:::
+
+
+:::{.callout-note appearance="default" icon="false"}
+# Simple Random Sampling
+
+* Draw subjects at random from the population [**without replacement**]{style='color:red'}.
+* A random sample is one in which every member of the population is [**equally likely**]{style='color:red'} to be chosen for the sample.
+* A true random sample is difficult to achieve.
+* Statisticians have developed methods for producing random samples that can be used to estimate characteristics of populations.
+:::
+
+## Section 7.1 Examples
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 1.
+
+::::{.panel-tabset}
+# Question
+
+In January 2015, the Pew Research Center published a report stating that 37% of Americans believed that genetically modified foods were safe to eat. This was based on a survey of 2002 American adults.
+
+a. What is the population?
+b. What is the sample?
+c. What was the parameter of interest?
+d. What is the statistic?
+
+# Answer
+
+[a. The population is all American adults.]{style='color:red'}<br>
+[b. The sample consists of the 2002 American adults surveyed.]{style='color:red'}<br>
+[c. The parameter is proportion of all American adults who believed that GMOs were safe to consume.]{style='color:red'}<br>
+[d. The statistic is 0.37.]{style='color:red'}
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 2.
+
+::::{.panel-tabset}
+# Question
+
+A high school wants to measure how often students vape, so the administration asks teachers to survey students via a hand-raise asking them if they vape. Why might this produce a measurement bias?
+
+# Answer
+
+
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 3.
+
+::::{.panel-tabset}
+# Question
+
+
+# Answer
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 4.
+
+::::{.panel-tabset}
+# Question
+
+
+# Answer
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 5.
+
+::::{.panel-tabset}
+# Question
+
+
+# Answer
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 6.
+
+::::{.panel-tabset}
+# Question
+
+
+# Answer
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 7.
+
+::::{.panel-tabset}
+# Question
+
+
+# Answer
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 8.
+
+::::{.panel-tabset}
+# Question
+
+
+
+# Answer
+::::
+:::
