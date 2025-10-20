@@ -4046,6 +4046,7 @@ window.Quarto = {
   <li><a href="#statistical-inference-1" id="toc-statistical-inference-1" class="nav-link" data-scroll-target="#statistical-inference-1">Statistical Inference</a></li>
   </ul></li>
   <li><a href="#section-7.2-examples" id="toc-section-7.2-examples" class="nav-link" data-scroll-target="#section-7.2-examples">Section 7.2 Examples</a></li>
+  <li><a href="#section-7.3.-central-limit-theorem-for-sample-proportions" id="toc-section-7.3.-central-limit-theorem-for-sample-proportions" class="nav-link" data-scroll-target="#section-7.3.-central-limit-theorem-for-sample-proportions">Section 7.3. Central Limit Theorem for Sample Proportions</a></li>
   </ul>
 </nav>
     </div>
@@ -4752,6 +4753,78 @@ SE = \sqrt{\frac{p(1-p)}{n}},
 </div>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="section-7.3.-central-limit-theorem-for-sample-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="section-7.3.-central-limit-theorem-for-sample-proportions">Section 7.3. Central Limit Theorem for Sample Proportions</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Application of the Central Limit Theorem to Sample Proportions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>The central limit theorem can be used to estimate proportions in a <span style="color:red"><strong>population</strong></span>.</li>
+<li>The central limit theorem can tell us that, if some basic conditions are met, the sampling distribution of the sample proportion (<span class="math inline">\(\hat{p}\)</span>) <span style="color:red"><strong>will be approximately normal</strong></span>.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Central Limit Theorem (CLT) for Sample Proportions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If we take a <span style="color:red"><strong>random</strong></span> sample from a population, and if the sample size is <span style="color:red"><strong>sufficiently large</strong></span> and the population size <span style="color:red"><strong>much larger than the sample size</strong></span>, then the sampling distribution of <span class="math inline">\(\hat{p}\)</span> is approximately <span style="color:red"><strong>normal</strong></span> with a mean of <span style="color:red"><strong><span class="math inline">\(p\)</span></strong></span> and a standard deviation of <span style="color:red"><span class="math display">\[
+  \text{SE} = \sqrt{\frac{p(1-p)}{n}},
+\]</span></span> where <span class="math inline">\(n\)</span> is the sample size.</p>
+<ul>
+<li>If the value of <span class="math inline">\(p\)</span> is unknown, we can use <span class="math inline">\(\hat{p}\)</span> in place of <span class="math inline">\(p\)</span> to estimate the standard error.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Conditions for the Applicability of the CLT for Sample Proportions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><span style="color:red"><strong>Sampling is random and independent</strong></span>.</li>
+<li><span style="color:red"><strong>Large sample size</strong></span>: The sample size <span class="math inline">\(n\)</span>, is large enough that the sample expects at least 10 successes and 10 failures. That is, <span style="color:red"><span class="math display">\[
+\begin{align*}
+\text{Number of Successes}: &amp;= np \geqslant 10,\\
+\text{Number of Failures}: &amp;= n(1-p) \geqslant 10.
+\end{align*}
+\]</span></span></li>
+<li>Large population: If the sampling is done without replacement, the population must be <span style="color:red"><strong>at least 10 times the sample size</strong></span>.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Central Limit Theorem and the Empirical Rule
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the conditions for the central limit theorem are met, the probability that a sample proportion will fall within two standard errors of the population proportion is <span style="color:red"><strong>approximately 95%</strong></span>.</p>
 </div>
 </div>
 
