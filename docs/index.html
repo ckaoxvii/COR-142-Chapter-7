@@ -4054,6 +4054,8 @@ $font-family: "Atkinson Hyperlegible", sans-serif;</style>
   </ul></li>
   <li><a href="#section-7.2-examples" id="toc-section-7.2-examples" class="nav-link" data-scroll-target="#section-7.2-examples">Section 7.2 Examples</a></li>
   <li><a href="#section-7.3.-central-limit-theorem-for-sample-proportions" id="toc-section-7.3.-central-limit-theorem-for-sample-proportions" class="nav-link" data-scroll-target="#section-7.3.-central-limit-theorem-for-sample-proportions">Section 7.3. Central Limit Theorem for Sample Proportions</a></li>
+  <li><a href="#section-7.4.-estimating-the-population-proportion-with-confidence-intervals" id="toc-section-7.4.-estimating-the-population-proportion-with-confidence-intervals" class="nav-link" data-scroll-target="#section-7.4.-estimating-the-population-proportion-with-confidence-intervals">Section 7.4. Estimating the Population Proportion with Confidence Intervals</a></li>
+  <li><a href="#section-7.4-examples" id="toc-section-7.4-examples" class="nav-link" data-scroll-target="#section-7.4-examples">Section 7.4 Examples</a></li>
   </ul>
 </nav>
     </div>
@@ -4834,8 +4836,392 @@ SE = \sqrt{\frac{p(1-p)}{n}},
 <p>If the conditions for the central limit theorem are met, the probability that a sample proportion will fall within two standard errors of the population proportion is <span style="color:red"><strong>approximately 95%</strong></span>.</p>
 </div>
 </div>
+</section>
+<section id="section-7.4.-estimating-the-population-proportion-with-confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="section-7.4.-estimating-the-population-proportion-with-confidence-intervals">Section 7.4. Estimating the Population Proportion with Confidence Intervals</h2>
+<ul>
+<li>Use the central limit theorem to construct a <span style="color:red"><strong>confidence interval</strong></span>.</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We now focus on <span style="color:red"><strong>inferential statistics</strong></span>. Often it is easy to calculate statistics from a <span style="color:red"><strong>sample</strong></span>, but it is difficult (and sometimes impossible) to calculate parameters from a <span style="color:red"><strong>population</strong></span>.</p>
+</div>
+</div>
+<section id="creating-a-confidence-interval-for-estimating-the-population-proportion" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-confidence-interval-for-estimating-the-population-proportion">Creating a Confidence Interval for Estimating the Population Proportion</h4>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example 7.4.1.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href>Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href>Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
+<p>According to pewresearch.org, an October 2016 article indicated that 685 of 1,201 adults randomly surveyed favor the legalization of marijuana.</p>
+<ol type="a">
+<li>What percent of the adults surveyed supported the requirement to legalize marijuana?</li>
+<li>Is the value in part (a) a sample statistic or a population parameter?</li>
+<li>Do you know the percentage of <em>all</em> American adults (<span class="math inline">\(p\)</span>) that support legalization of marijuana?</li>
+<li>Do you think the percent of adults surveyed who support the requirement is exactly equal to the percent of all American adults who support legalization? That is, is our sample proportion (<span class="math inline">\(\hat{p}\)</span>) exactly equal to the population proportion (<span class="math inline">\(p\)</span>)?</li>
+</ol>
+</div>
+<div id="tabset-16-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-2-tab">
+<p><span style="color:red">a. The percent of adults surveyed who supported legalization is <span class="math display">\[
+\hat{p} = \frac{685}{1201} \approx 0.5704 \text{ or } 57.04\%.
+\]</span></span><br> <span style="color:red">b. The value in part (a) is a sample statistic.</span><br> <span style="color:red">c. No, we do not know the percentage of all American adults (<span class="math inline">\(p\)</span>) that support legalization of marijuana.</span><br> <span style="color:red">d. No, we do not think that the sample proportion (<span class="math inline">\(\hat{p}\)</span>) is exactly equal to the population proportion (<span class="math inline">\(p\)</span>).</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>From the previous sections, we know the following facts:</p>
+<ul>
+<li>Our estimator, <span class="math inline">\(\hat{p}\)</span>, is an <span style="color:red"><strong>unbiased</strong></span> estimator of the population proportion, <span class="math inline">\(p\)</span>. Therefore, the population parameter, <span class="math inline">\(p\)</span>, should be <span style="color:red"><strong>close to</strong></span> our sample statistic, <span class="math inline">\(\hat{p}\)</span>.</li>
+<li>The standard error is estimated as <span style="color:red"><span class="math display">\[
+\text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.57(1-0.57)}{1201}} \approx 0.0143.
+\]</span></span></li>
+<li>Since the sample size is large, the probability distribution of <span class="math inline">\(\hat{p}\)</span> is approximately <span style="color:red"><strong>normal</strong></span> and centered around the true population proportion.</li>
+<li>There is about a 95% chance that <span class="math inline">\(\hat{p}\)</span> is within <span style="color:red"><strong>two</strong></span> standard errors of population proportion <span class="math inline">\(p\)</span>. Thus, <span style="color:red"><span class="math display">\[
+2 \times \text{SE} = 2 \times 0.0143 = 0.0286.
+\]</span></span></li>
+<li>Therefore, we are 95% confident that the value of the true population proportion is within <span style="color:red"><strong>2.86</strong></span> percentage points of <span style="color:red"><strong>0.57</strong></span>.</li>
+<li>Hence, we are 95% confident that the true population proportion (i.e., the proportion of <em>all</em> American adults who support legalization of marijuana) is between <span style="color:red"><span class="math display">\[
+0.57 - 0.0286 = 0.5414
+\]</span></span> and <span style="color:red"><span class="math display">\[
+0.57 + 0.0286 = 0.5986.
+\]</span></span> This is called a <strong>confidence interval</strong>.</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Confidence Interval
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Confidence intervals</strong> provide us with</p>
+<ol type="1">
+<li>A range of <span style="color:red"><strong>possible values</strong></span> for a population parameter.</li>
+<li>A confidence level, which express our level of confidence that the interval contains the <span style="color:red"><strong>true population parameter</strong></span>.</li>
+<li>Tells us that how often the estimation is successful.</li>
+<li>Measure the success rate of the <span style="color:red"><strong>method</strong></span>, not of any one particular interval.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Margin of Error
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>margin of error</strong> tells us how far from the population parameter our estimate can be. <span style="color:red"><span class="math display">\[
+  \text{Margin of Error} = z^* \times \text{SE}_{\text{est}},
+\]</span></span> where <span class="math inline">\(z^*\)</span> indicates the number of standard errors to include in the margin of error.</p>
+<p>From the empirical rule, we know that</p>
+<ul>
+<li><span class="math inline">\(z^\ast = 1\)</span> corresponds with an approximate confidence level of <span style="color:red"><strong>68%</strong></span>;</li>
+<li><span class="math inline">\(z^\ast = 2\)</span> corresponds with an approximate confidence level of <span style="color:red"><strong>95%</strong></span>;</li>
+<li><span class="math inline">\(z^\ast = 3\)</span> corresponds with an approximate confidence level of <span style="color:red"><strong>99.7%</strong></span>.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Confidence Level &amp; Margin of Error
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The table below shows the more precise <span class="math inline">\(z^\ast\)</span> values for some frequently used confidence levels.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 41%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Confidence Level</th>
+<th>Margin of Error is</th>
+<th><span class="math inline">\(z^\ast\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="color:red"><strong>80%</strong></span></td>
+<td><span style="color:red"><strong>1.282</strong></span> Standard Errors</td>
+<td><span style="color:red"><strong>1.282</strong></span></td>
+</tr>
+<tr class="even">
+<td><span style="color:red"><strong>90%</strong></span></td>
+<td><span style="color:red"><strong>1.645</strong></span> Standard Errors</td>
+<td><span style="color:red"><strong>1.645</strong></span></td>
+</tr>
+<tr class="odd">
+<td><span style="color:red"><strong>95%</strong></span></td>
+<td><span style="color:red"><strong>1.960</strong></span> Standard Errors</td>
+<td><span style="color:red"><strong>1.960</strong></span></td>
+</tr>
+<tr class="even">
+<td><span style="color:red"><strong>99%</strong></span></td>
+<td><span style="color:red"><strong>2.576</strong></span> Standard Errors</td>
+<td><span style="color:red"><strong>2.576</strong></span></td>
+</tr>
+<tr class="odd">
+<td><span style="color:red"><strong>99.7%</strong></span></td>
+<td><span style="color:red"><strong>3</strong></span> Standard Errors</td>
+<td><span style="color:red"><strong>3</strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Confidence Interval for a Population Proportion.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Confidence intervals are of the form: <span style="color:red"><span class="math display">\[
+\hat{p} \pm m,
+\]</span></span> where <span class="math inline">\(m\)</span> is the margin of error. Since <span style="color:red"><span class="math inline">\(m = z^\ast \cdot \text{SE}\)</span></span>, where <span class="math inline">\(\text{SE}\)</span> is the standard error, the confidence interval is <span style="color:red"><span class="math display">\[
+  \hat{p} \pm z^\ast \cdot \text{SE} \quad \text{or} \quad (\hat{p} - z^\ast \cdot \text{SE}, \; \hat{p} + z^\ast \cdot \text{SE}).
+\]</span></span></p>
+<p>To find SE, we substitute <span class="math inline">\(\hat{p}\)</span> for <span class="math inline">\(p\)</span>, since <span class="math inline">\(p\)</span> is unknown, and estimate the standard error as <span style="color:red"><span class="math display">\[
+  \text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.
+\]</span></span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Remark.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since the confidence interval calculations are based on the central limit theorem for sample proportions, the conditions for the CLT must be satisfied to create a confidence interval.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Conditions for the Central Limit Theorem for Sample Proportions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Sampling is random and independent.</li>
+<li>Large sample: The sample size, 𝑛, is large enough to expect at least 10 successes and 10 failures. That is, <span class="math inline">\(np \geqslant 10\)</span> and <span class="math inline">\(n(1-p) \geqslant 10\)</span>.</li>
+<li>Large population: If the sampling is done without replacement, the population must be at least 10 times larger than the sample size.</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="section-7.4-examples" class="level2">
+<h2 class="anchored" data-anchor-id="section-7.4-examples">Section 7.4 Examples</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example 1.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-17-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-1" role="tab" aria-controls="tabset-17-1" aria-selected="true" href>Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-2" role="tab" aria-controls="tabset-17-2" aria-selected="false" href>Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-17-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-17-1-tab">
+<ol type="1">
+<li>During a recent semester, 63 of the 159 MAT 223 students randomly surveyed indicated that they had a negative situation occurred to them based on a posting on social media. Let us estimate the percentage of all Flagler College students who had a negative situation occur to them based on a posting on social media.</li>
+</ol>
+<ol type="a">
+<li>What percent of the students surveyed had a negative situation occur to them based on a posting on social media?</li>
+<li>What symbol do we use to represent the proportion (percentage) that we calculated in (a)? Is this value a sample statistic or a population parameter?</li>
+<li>Check the conditions of the central limit theorem to create a confidence interval.</li>
+</ol>
+<ul>
+<li>Is the sample random and independent?</li>
+<li>Is the sample size sufficiently large?</li>
+<li>Is the population sufficiently large?</li>
+</ul>
+<ol start="4" type="a">
+<li>Calculate the standard error.</li>
+<li>Construct a 95% confidence interval. What is the value of <span class="math inline">\(z^\ast\)</span>?</li>
+</ol>
+<ul>
+<li>Calculate the margin of error.</li>
+<li>Find the lower bound of the confidence interval.</li>
+<li>Find the upper bound of the confidence interval.</li>
+</ul>
+<ol start="6" type="a">
+<li>Graph and label the confidence interval.</li>
+<li>Interpret the confidence interval.</li>
+</ol>
+</div>
+<div id="tabset-17-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-2-tab">
+<p><span style="color:red">a. The percentage is <span class="math display">\[
+\hat{p} = \frac{63}{159} \approx 0.396 \text{ or } 39.6\%.
+\]</span></span><br> <span style="color:red">b. The symbol we use to represent the proportion calculated in (a) is <span class="math inline">\(\hat{p}\)</span>. This value is a sample statistic.</span><br> <span style="color:red">c. Conditions: - Yes, the sample is random and independent. - Yes, the sample size is sufficiently large since <span class="math inline">\(n\hat{p} = 159 \times 0.396 \approx 63 \geqslant 10\)</span> and <span class="math inline">\(n(1-\hat{p}) = 159 \times (1-0.396) \approx 96 \geqslant 10\)</span>. - Yes, the population is sufficiently large since the population of Flagler College students is much larger than 10 times the sample size.</span><br> <span style="color:red">d. The standard error is estimated as <span class="math display">\[
+\text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.396(1-0.396)}{159}} \approx 0.0387.
+\]</span></span><br> <span style="color:red">e. To construct a 95% confidence interval, we use <span class="math inline">\(z^\ast = 1.960\)</span>.<br> - The margin of error is <span class="math display">\[
+  m = z^\ast \cdot \text{SE}_{\text{est}} = 1.960 \times 0.0387 \approx 0.0758.
+  \]</span> - The lower bound of the confidence interval is <span class="math display">\[
+  \hat{p} - m = 0.396 - 0.0758 \approx 0.3202.
+  \]</span> - The upper bound of the confidence interval is <span class="math display">\[
+  \hat{p} + m = 0.396 + 0.0758  \approx 0.4718.
+  \]</span></span><br> <span style="color:red">g. We are 95% confident that the true proportion of all Flagler College students who had a negative situation occur to them based on a posting on social media is between approximately 32.02% and 47.18%.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example 2.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href>Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href>Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
+<p>According to pewresearch.org, a 2014 survey found that 32.1% of adults aged 18–34 were living with their parents. Suppose that this was based on a random sample of 1,200 adults in this age group.</p>
+<ol type="a">
+<li>Check that the conditions for the CLT apply.</li>
+<li>Use the app to find the confidence interval using confidence levels of 80%, 90%, 95%, and 99% to estimate the population proportion of all Americans in this age group who live with their parents.</li>
+<li>What happened to the confidence interval as the level of confidence increases?</li>
+<li>Is it plausible to conclude that the true percentage of adults in this age group living with parents is 38%?</li>
+</ol>
+</div>
+<div id="tabset-18-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-18-2-tab">
+<p><span style="color:red">a. The sample is random and independent. Since <span class="math inline">\(n\hat{p} = 1200 \times 0.321 = 385.2 \geqslant 10\)</span> and <span class="math inline">\(n(1-\hat{p}) = 1200 \times (1-0.321) = 814.8 \geqslant 10\)</span>, the sample size is sufficiently large. The population is sufficiently large since the population of adults aged 18–34 is much larger than 10 times the sample size.</span><br> <span style="color:red">b.</span> <span style="color:red">c. As the level of confidence increases, the confidence interval becomes wider.</span><br> <span style="color:red">d. We are 99% confident that the true percentage is between 28.6% and 35.6%. Because 38% is not in this interval, it is not plausible that the true percentage is 38%</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As the confidence level increase, the <span style="color:red"><strong>length</strong></span> of the confidence interval also increases.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example 3.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-19-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-1" role="tab" aria-controls="tabset-19-1" aria-selected="true" href>Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-19-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-2" role="tab" aria-controls="tabset-19-2" aria-selected="false" href>Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-19-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-19-1-tab">
+<p>A political consultant randomly surveys 500 voters in a district to see how many intend to vote for a certain candidate. Of the 500 voters surveyed, 265 indicate they will vote for the candidate. Use a 99% confidence interval, should the consultant predict that the candidate will win the election? Why or why not? (He/she must obtain a simple majority of the votes.)</p>
+<ol type="a">
+<li>Verify the conditions for the CLT.</li>
+<li>Construct a 99% confidence interval.</li>
+<li>Summarize your results.</li>
+</ol>
+</div>
+<div id="tabset-19-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-19-2-tab">
+<p><span style="color:red">a. The sample is random and independent. Since <span class="math inline">\(n\hat{p} = 500 \times 0.53 = 265 \geqslant 10\)</span> and <span class="math inline">\(n(1-\hat{p}) = 500 \times (1-0.53) = 235 \geqslant 10\)</span>, the sample size is sufficiently large. The population is sufficiently large since the population of voters in the district is much larger than 10 times the sample size.</span><br> <span style="color:red">b. To construct a 99% confidence interval, we use <span class="math inline">\(z^\ast = 2.576\)</span>. The standard error is estimated as <span class="math display">\[
+\text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.53(1-0.53)}{500}} \approx 0.0223.
+\]</span> The margin of error is <span class="math display">\[
+m = z^\ast \cdot \text{SE}_{\text{est}} = 2.576 \times 0.0223 \approx 0.0574.
+\]</span> The lower bound of the confidence interval is <span class="math display">\[
+\hat{p} - m = 0.53 - 0.0574 \approx 0.4726.
+\]</span> The upper bound of the confidence interval is <span class="math display">\[
+\hat{p} + m = 0.53 + 0.0574  \approx 0.5874.
+\]</span> Thus, the 99% confidence interval is <span class="math display">\[
+(0.4726, \; 0.5874).
+\]</span></span><br> <span style="color:red">c. The consultant should only predict a win if the confidence interval only contains values that are greater than 50%. Since the confidence interval includes values less than 0.5, it is not certain that the candidate will win the election.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example 4.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-20-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-1" role="tab" aria-controls="tabset-20-1" aria-selected="true" href>Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-20-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-2" role="tab" aria-controls="tabset-20-2" aria-selected="false" href>Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-20-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-20-1-tab">
+<p>According to housingwire.com, 93.8% of homeowners had “positive equity” in their homes. Suppose that the margin of sampling error is <span class="math inline">\(\pm 3\)</span> percentage points with a confidence level of 95%.</p>
+<ol type="a">
+<li>State the confidence interval in interval notation.</li>
+<li>How would you interpret this confidence interval?</li>
+</ol>
+</div>
+<div id="tabset-20-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-20-2-tab">
+<p><span style="color:red">a. Note that <span class="math inline">\(p = 0.938\)</span> and the margin of error is <span class="math inline">\(m = 0.03\)</span>. Thus, the confidence interval is</span> <span style="color:red"><span class="math display">\[
+(0.938 - 0.03, 0.938 + 0.03) = (0.908, \; 0.968).
+\]</span></span> <span style="color:red">b. We are 95% confident that the true proportion of all homeowners who have positive equity in their homes is between 90.8% and 96.8%.</span></p>
+</div>
+</div>
+</div>
 
 
+</div>
+</div>
 </section>
 
 
