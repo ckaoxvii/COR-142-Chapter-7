@@ -7,10 +7,10 @@ format:
     toc: true
     toc-location: right
     embed-resources: true
-    css: styles.css
     lightbox: true
-    link-external-icon: true
-    link-external-newwindow: true
+    mainfont: "Atkinson Hyperlegible"
+filters:
+  - tikz
 ---
 
 ```{r}
@@ -213,6 +213,7 @@ A high school wants to measure how often students vape, so the administration as
 
 # Answer
 
+[Students may not want to admit to vaping in front of their teachers and peers. This would lead to inaccurate count of the students who vape.]{style='color:red'}
 
 ::::
 :::
@@ -223,8 +224,12 @@ A high school wants to measure how often students vape, so the administration as
 ::::{.panel-tabset}
 # Question
 
+Internet polls are very common with local news organizations. Why might internet polls produce a sampling bias?
 
 # Answer
+
+[Internet polls may produce a sampling bias because they only include individuals who have internet access and are willing to participate in online surveys. This may exclude certain demographics, leading to a non-representative sample.]{style='color:red'}
+
 ::::
 :::
 
@@ -234,8 +239,16 @@ A high school wants to measure how often students vape, so the administration as
 ::::{.panel-tabset}
 # Question
 
+Identify possible biases from each of the following situations
+
+a. A survey of college students' music preferences asks "Do you like rock music or another genre?"
+b. Suppose the county commissioners want to know if the county residents support constructing a new high-rise on the beach. They send out a survey to only beach residents.
 
 # Answer
+
+[a. The question is leading because it suggests that rock music is the preferred choice.]{style='color:red'}<br>
+[b. The sample is biased because it only includes beach residents, who may have different opinions than non-beach residents.]{style='color:red'}
+
 ::::
 :::
 
@@ -246,7 +259,12 @@ A high school wants to measure how often students vape, so the administration as
 # Question
 
 
+Suppose you want to estimate the mean GPA of all students at your school. You set up a table in the library asking for volunteers to tell you their GPAs. Do you think you would get a representative sample? Why or why not?
+
 # Answer
+
+[No. Students who volunteer to report their GPA may be more likely to have higher GPAs, leading to a sampling bias.]{style='color:red'}
+
 ::::
 :::
 
@@ -256,8 +274,16 @@ A high school wants to measure how often students vape, so the administration as
 ::::{.panel-tabset}
 # Question
 
+An August 2022 article from Forbes magazine read: 
+
+"Results are in from the Florida’s first mandated system-wide survey of ”intellectual freedom and viewpoint diversity” at its public universities, and one indisputable conclusion can be drawn from it: most students, staff, and faculty ignored it, yielding little in the way of trustworthy results. The survey was required when Florida’s Republican-controlled Legislature at the urging of Governor Ron DeSantis, enacted House Bill 233, creating section 1001.73(13), in Florida Statutes, entitled INTELLECTUAL FREEDOM AND VIEWPOINT DIVERSITY ASSESSMENT…Of the 368,000 college students who received the voluntary survey, 8,835, a measly 2.4%, completed it, according to the report presented Friday to the Florida Board of Governors, which oversees the State University System of Florida."
+
+The survey included questions such as: "How should colleges or universities handle students who disrupt invited speakers and prevent them from speaking?"" followed by a list of punitive measures. What biases, if any, do you find from this survey?
 
 # Answer
+
+[The low response rate (2.4%) indicates a likely sampling bias, as those who chose to respond may have different views than the overall population of students, staff, and faculty. Additionally, the wording of the question about disruptive students may introduce measurement bias, as it frames the issue in a way that could influence respondents' answers.]{style='color:red'}
+
 ::::
 :::
 
@@ -267,8 +293,12 @@ A high school wants to measure how often students vape, so the administration as
 ::::{.panel-tabset}
 # Question
 
+A phone survey asked whether Social Security should be continued or abandoned immediately. Only landlines (not cell phones) were called. Do you think this would introduce bias? Explain.
 
 # Answer
+
+[Yes. This would likely introduce sampling bias because individuals who only use cell phones (often younger demographics) are excluded from the survey, potentially skewing the results towards the opinions of older individuals who are more likely to have landlines.]{style='color:red'}
+
 ::::
 :::
 
@@ -278,8 +308,592 @@ A high school wants to measure how often students vape, so the administration as
 ::::{.panel-tabset}
 # Question
 
-
+A school district is interested in finding out what percentage of voters in the district would favor the passage of a school bond measure. The district sends out a survey to all school parents asking, "Do you favor the passing of a school bond measure to provide additional resources to improve educational opportunities for your students?" Identify any sources of possible bias in this survey.
 
 # Answer
+
+[The question is leading, as it suggests that passing the bond measure will improve educational opportunities, which may influence respondents to answer favorably. Additionally, only parents of students in the school district are surveyed, which may not represent the views of all voters in the district.]{style='color:red'}
+::::
+:::
+
+## Section 7.2: Measure the Quality of a Survey
+
+### Statistical Inference
+
+One of the most import application of statistics is [**statistical inference**]{style='color:red'}, which is the process of using data from a sample to make estimates or test hypotheses about the characteristics of a population. However, since we are using a sample to make inferences about a population, there is always some uncertainty involved. Fortunately, we can quantify this uncertainty by measuring the quality of our estimates. Two important aspects of the quality of an estimate are its [**accuracy**]{style='color:red'} and [**precision**]{style='color:red'}.
+
+:::{.callout-note appearance="default" icon="false"}
+# Accuracy vs. Precision
+
+* **Accurate:** The measurement process captures the intended quantity; it correctly estimates the [**population parameter**]{style='color:red'}.
+* **Precise:** If the measurement process is repeated, the estimates are very [**consistent**]{style='color:red'}.
+
+![](sec_72_fig_accuracy_precision.png){fig-align="center"}
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Exercise 1. Sample Proportion Distribution.
+
+:::{.panel-tabset}
+# Instructions
+1. Log into the computer station in front of you.
+2. Scan the first QR code in the margin to take a quick survey.
+3. Open a browser on your computer station and go to [https://ckaoxvii.github.io/sample_proportion_distribution/](https://ckaoxvii.github.io/sample_proportion_distribution/){.external target="_blank"}.
+::::
+:::
+
+:::: {.column-margin}
+:::{style='text-align:center;'}
+![Survey](sec_72_survey_QR.png){}
+:::
+::::
+
+:::{.callout-note appearance="default" icon="false"}
+# Sampling Distribution
+
+_Recall:_ Samples may be used to make inferences about [**a population**]{style='color:red'}. Taking repeated samples form a population create a distribution of sample statistics, called the [**sampling distribution**]{style='color:red'}.
+
+* The estimator $\hat{p}$ (sample proportion) is [**an unbiased estimator**]{style='color:red'}, as long as the samples are random.
+* [**The precision improves as sample size increases.**]{style='color:red'}
+* The shape of the sampling distribution is [**more symmetric as sample size increases.**]{style='color:red'}
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Calculating Bias and Standard Error
+
+Suppose that
+
+a. the samples are randomly chosen from the population, and
+b. if the sampling is without replacement, the population is at least 10 times larger than the sample size.
+
+Then
+
+* the bias of $\hat{p}$ is [**0**]{style='color:red'}, and
+* the standard error (SE) of $\hat{p}$ is given by
+[$$
+SE = \sqrt{\frac{p(1-p)}{n}},
+$$]{style='color:red'}
+where $p$ is the _population proportion_ and $n$ is the _sample size_.
+:::
+
+## Section 7.2 Examples
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 1.
+
+::::{.panel-tabset}
+# Question
+
+According to the website VGCharts[^1], as of June 2021, PS5 had a total global sales of 9,748,029 units, where as Xbox Series X/S had a total global sales of 5,815,532 units. Use the [webapp](https://ckaoxvii.github.io/sample_proportion_distribution/){.external target="_blank"} from Exercise 1 to complete parts b through e.
+
+[^1]: https://www.vgchartz.com/article/449843/ps5-vs-xbox-series-xs-sales-comparison-june-2021/
+
+a. Find the population proportion, $p$, of PS5, out of the combined total global sales of both consoles.
+b. Use the population proportion from part a and a sample size of 10, find the mean of the sampling distribution of the sample proportion $\hat{p}$ after 10 simulations. Is the $\hat{p}$ from each simulation necessarily the same as $p$?
+c. 	Repeat part b and find the mean of the sampling distribution of the sample proportion of $\hat{p}$ after 100 simulated samples.
+d. 	Repeat this simulation using 100 simulated samples, but with a sample size of $n = 50$. What did you notice about the shape of the distribution of $\hat{p}$?
+e. 	Do this one more time but with a sample size of $n = 100$. How is the shape of the distribution of $\hat{p}$ different this time? What is your standard deviation? Calculate the SE by hand and compare.
+
+# Answer
+
+[a. The population of both consoles is
+$$
+  9748029 + 5815532 = 15563561.
+$$ 
+Thus the population proportion of PS5 is 
+$$
+  p = \frac{9748029}{15563561} \approx 0.626.
+$$
+]{style='color:red'}<br>
+[b. The mean of the sampling distribution of $\hat{p}$ is approximately 0.55 after 10 simulations. The $\hat{p}$ from each simulation is not necessarily the same as $p$.]{style='color:red'}<br>
+[c. The mean of the sampling distribution of $\hat{p}$ is approximately 0.632 after 100 simulations.]{style='color:red'}<br>
+[d..]{style='color:red'}<br>
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 2.
+
+::::{.panel-tabset}
+# Question
+
+# Answer
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 3.
+
+::::{.panel-tabset}
+# Question
+
+According to a newspaper, 77\% of high school seniors have a driver’s license. Suppose we take a random sample of 100 high school seniors and find the proportion who have a driver’s license.
+
+a.	What value should we expect for our sample proportion?
+b.	What is the standard error?
+c.	How do we interpret these values?
+d.	Suppose we increase the sample size from 100 to 500. What effect would this have on the standard error? 
+
+# Answer
+
+
+::::
+:::
+
+## Section 7.3. Central Limit Theorem for Sample Proportions
+
+:::{.callout-note appearance="default" icon="false"}
+# Application of the Central Limit Theorem to Sample Proportions
+
+1. The central limit theorem can be used to estimate proportions in a [**population**]{style='color:red'}.
+2. The central limit theorem can tell us that, if some basic conditions are met, the sampling distribution of the sample proportion ($\hat{p}$) [**will be approximately normal**]{style='color:red'}.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# The Central Limit Theorem (CLT) for Sample Proportions
+
+If we take a [**random**]{style='color:red'} sample from a population, and if the sample size is [**sufficiently large**]{style='color:red'} and the population size [**much larger than the sample size**]{style='color:red'}, then the sampling distribution of $\hat{p}$ is approximately [**normal**]{style='color:red'} with a mean of [**$p$**]{style='color:red'} and a standard deviation of 
+[$$
+  \text{SE} = \sqrt{\frac{p(1-p)}{n}},
+$$]{style='color:red'}
+where $n$ is the sample size.
+
+* If the value of $p$ is unknown, we can use $\hat{p}$ in place of $p$ to estimate the standard error.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Conditions for the Applicability of the CLT for Sample Proportions
+
+1. [**Sampling is random and independent**]{style='color:red'}.
+2. [**Large sample size**]{style='color:red'}: The sample size $n$, is large enough that the sample expects at least 10 successes and 10 failures. That is,
+[$$
+\begin{align*}
+\text{Number of Successes}: &= np \geqslant 10,\\
+\text{Number of Failures}: &= n(1-p) \geqslant 10.
+\end{align*}
+$$]{style='color:red'}
+3. Large population: If the sampling is done without replacement, the population must be [**at least 10 times the sample size**]{style='color:red'}. 
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# The Central Limit Theorem and the Empirical Rule
+
+If the conditions for the central limit theorem are met, the probability that a sample proportion will fall within two standard errors of the population proportion is [**approximately 95\%**]{style='color:red'}. 
+:::
+
+## Section 7.4. Estimating the Population Proportion with Confidence Intervals
+
+* Use the central limit theorem to construct a [**confidence interval**]{style='color:red'}.
+
+:::{.callout-note appearance="default" icon="false"}
+We now focus on [**inferential statistics**]{style='color:red'}. Often it is easy to calculate statistics from a [**sample**]{style='color:red'}, but it is difficult (and sometimes impossible) to calculate parameters from a [**population**]{style='color:red'}.
+:::
+
+#### Creating a Confidence Interval for Estimating the Population Proportion
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 7.4.1.
+
+::::{.panel-tabset}
+# Question
+
+According to pewresearch.org, an October 2016 article indicated that 685 of 1,201 adults randomly surveyed favor the legalization of marijuana.
+
+a. What percent of the adults surveyed supported the requirement to legalize marijuana?
+b. Is the value in part (a) a sample statistic or a population parameter?
+c. Do you know the percentage of _all_ American adults ($p$) that support legalization of marijuana?
+d. Do you think the percent of adults surveyed who support the requirement is exactly equal to the percent of all American adults who support legalization? That is, is our sample proportion ($\hat{p}$) exactly equal to the population proportion ($p$)?
+
+# Answer
+[a. The percent of adults surveyed who supported legalization is
+$$
+\hat{p} = \frac{685}{1201} \approx 0.5704 \text{ or } 57.04\%.
+$$]{style='color:red'}<br>
+[b. The value in part (a) is a sample statistic.]{style='color:red'}<br>
+[c. No, we do not know the percentage of all American adults ($p$) that support legalization of marijuana.]{style='color:red'}<br>
+[d. No, we do not think that the sample proportion ($\hat{p}$) is exactly equal to the population proportion ($p$).]{style='color:red'}
+::::
+:::
+
+From the previous sections, we know the following facts:
+
+* Our estimator, $\hat{p}$, is an [**unbiased**]{style='color:red'} estimator of the population proportion, $p$. Therefore, the population parameter, $p$, should be [**close to**]{style='color:red'} our sample statistic, $\hat{p}$.
+* The standard error is estimated as
+[$$
+  \text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.57(1-0.57)}{1201}} \approx 0.0143.
+$$]{style='color:red'}
+* Since the sample size is large, the probability distribution of $\hat{p}$ is approximately [**normal**]{style='color:red'} and centered around the true population proportion. 
+* There is about a 95\% chance that $\hat{p}$ is within [**two**]{style='color:red'} standard errors of population proportion $p$. Thus,
+[$$
+  2 \times \text{SE} = 2 \times 0.0143 = 0.0286.
+$$]{style='color:red'}
+* Therefore, we are 95\% confident that the value of the true population proportion is within [**2.86**]{style='color:red'} percentage points of [**0.57**]{style='color:red'}.
+* Hence, we are 95\% confident that the true population proportion (i.e., the proportion of _all_ American adults who support legalization of marijuana) is between
+[$$
+  0.57 - 0.0286 = 0.5414 
+$$]{style='color:red'}
+and
+[$$
+  0.57 + 0.0286 = 0.5986.
+$$]{style='color:red'} This is called a **confidence interval**.
+
+:::{.callout-note appearance="default" icon="false"}
+# Confidence Interval
+
+**Confidence intervals** provide us with
+
+1. A range of [**possible values**]{style='color:red'} for a population parameter.
+2. A confidence level, which express our level of confidence that the interval contains the [**true population parameter**]{style='color:red'}.
+3. Tells us that how often the estimation is successful.
+4. Measure the success rate of the [**method**]{style='color:red'}, not of any one particular interval.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Margin of Error
+
+The **margin of error** tells us how far from the population parameter our estimate can be.
+[$$
+  \text{Margin of Error} = z^* \times \text{SE}_{\text{est}},
+$$]{style='color:red'}
+where $z^*$ indicates the number of standard errors to include in the margin of error.
+
+From the empirical rule, we know that
+
+* $z^\ast = 1$ corresponds with an approximate confidence level of [**68\%**]{style='color:red'};
+* $z^\ast = 2$ corresponds with an approximate confidence level of [**95\%**]{style='color:red'};
+* $z^\ast = 3$ corresponds with an approximate confidence level of [**99.7\%**]{style='color:red'}.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Confidence Level & Margin of Error
+
+The table below shows the more precise $z^\ast$ values for some frequently used confidence levels.
+
+| Confidence Level | Margin of Error is | $z^\ast$ |
+|------------------|--------------------|----------|
+| [**80\%**]{style='color:red'} | [**1.282**]{style='color:red'} Standard Errors | [**1.282**]{style='color:red'}  |
+| [**90\%**]{style='color:red'} | [**1.645**]{style='color:red'} Standard Errors | [**1.645**]{style='color:red'}  |
+| [**95\%**]{style='color:red'} | [**1.960**]{style='color:red'} Standard Errors | [**1.960**]{style='color:red'}  |
+| [**99\%**]{style='color:red'} | [**2.576**]{style='color:red'} Standard Errors | [**2.576**]{style='color:red'}  |
+| [**99.7\%**]{style='color:red'} | [**3**]{style='color:red'} Standard Errors | [**3**]{style='color:red'}  |
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Confidence Interval for a Population Proportion.
+
+Confidence intervals are of the form:
+[$$
+\hat{p} \pm m,
+$$]{style='color:red'}
+where $m$ is the margin of error. Since [$m = z^\ast \cdot \text{SE}$]{style='color:red'}, where $\text{SE}$ is the standard error, the confidence interval is
+[$$
+  \hat{p} \pm z^\ast \cdot \text{SE} \quad \text{or} \quad (\hat{p} - z^\ast \cdot \text{SE}, \; \hat{p} + z^\ast \cdot \text{SE}).
+$$]{style='color:red'}
+
+To find SE, we substitute $\hat{p}$ for $p$, since $p$ is unknown, and estimate the standard error as
+[$$
+  \text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.
+$$]{style='color:red'}
+:::
+
+:::{.callout-warning appearance="default" icon="false"}
+# Remark.
+
+Since the confidence interval calculations are based on the central limit theorem for sample proportions, the conditions for the CLT must be satisfied to create a confidence interval.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Conditions for the Central Limit Theorem for Sample Proportions
+
+1. Sampling is random and independent.
+2. Large sample: The sample size, 𝑛, is large enough to expect at least 10 successes and 10 failures. That is, $np \geqslant 10$ and $n(1-p) \geqslant 10$. 
+3. Large population: If the sampling is done without replacement, the population must be at least 10 times larger than the sample size.
+:::
+
+## Section 7.4 Examples
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 1.
+::::{.panel-tabset}
+# Question
+
+1. During a recent semester, 63 of the 159 MAT 223 students randomly surveyed indicated that they had a negative situation occurred to them based on a posting on social media. Let us estimate the percentage of all Flagler College students who had a negative situation occur to them based on a posting on social media.
+
+a. What percent of the students surveyed had a negative situation occur to them based on a posting on social media?
+b. What symbol do we use to represent the proportion (percentage) that we calculated in (a)? Is this value a sample statistic or a population parameter?
+c. Check the conditions of the central limit theorem to create a confidence interval.
+  - Is the sample random and independent?
+  - Is the sample size sufficiently large?
+  - Is the population sufficiently large?
+d. Calculate the standard error.
+e. Construct a 95\% confidence interval. What is the value of $z^\ast$?
+  - Calculate the margin of error.
+  - Find the lower bound of the confidence interval.
+  - Find the upper bound of the confidence interval.
+f. Graph and label the confidence interval.
+g. Interpret the confidence interval.
+
+# Answer
+
+[a. The percentage is
+$$
+\hat{p} = \frac{63}{159} \approx 0.396 \text{ or } 39.6\%.
+$$]{style='color:red'}<br>
+[b. The symbol we use to represent the proportion calculated in (a) is $\hat{p}$. This value is a sample statistic.]{style='color:red'}<br>
+[c. Conditions:
+  - Yes, the sample is random and independent.
+  - Yes, the sample size is sufficiently large since $n\hat{p} = 159 \times 0.396 \approx 63 \geqslant 10$ and $n(1-\hat{p}) = 159 \times (1-0.396) \approx 96 \geqslant 10$.
+  - Yes, the population is sufficiently large since the population of Flagler College students is much larger than 10 times the sample size.]{style='color:red'}<br>
+[d. The standard error is estimated as
+$$
+\text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.396(1-0.396)}{159}} \approx 0.0387.
+$$]{style='color:red'}<br>
+[e. To construct a 95\% confidence interval, we use $z^\ast = 1.960$.<br>
+  - The margin of error is
+  $$
+  m = z^\ast \times \text{SE}_{\text{est}} = 1.960 \times 0.0387 \approx 0.0758.
+  $$
+  - The lower bound of the confidence interval is
+  $$
+  \hat{p} - m = 0.396 - 0.0758 \approx 0.3202.
+  $$
+  - The upper bound of the confidence interval is
+  $$
+  \hat{p} + m = 0.396 + 0.0758  \approx 0.4718.
+  $$]{style='color:red'}<br>
+[f.]{style='color:red'}
+```{.tikz}
+\begin{tikzpicture}[x=40cm,y=2cm]
+  % Parameters
+  \def\phat{0.396}
+  \def\moe{0.0758}
+  \pgfmathsetmacro{\lower}{\phat-\moe}
+  \pgfmathsetmacro{\upper}{\phat+\moe}
+
+  % Number line (regular black)
+  \draw[<->, thick] (0.25,0) -- (0.55,0) node[right] {};
+
+
+  % CI ticks and labels
+  \draw[thick] (\lower,0.07) -- (\lower,-0.07) node[below=4pt] {\large 0.3202};
+  \draw[thick] (\phat,0.07) -- (\phat,-0.07) node[below=4pt] {\large $\hat{p}=0.396$};
+  \draw[thick] (\upper,0.07) -- (\upper,-0.07) node[below=4pt] {\large 0.4718};
+
+  % Blue bold confidence interval (on the number line)
+  \draw[red, ultra thick] (\lower,0) -- (\upper,0);
+  % End caps
+  \draw[red, ultra thick] (\lower,-0.08) -- (\lower,0.08);
+  \draw[red, ultra thick] (\upper,-0.08) -- (\upper,0.08);
+
+  % Optional annotation
+  \node[red] at (\phat,0.3) {\Large CI: $(0.3202,\;0.4718)$};
+\end{tikzpicture}
+```
+
+[g. We are 95\% confident that the true proportion of all Flagler College students who had a negative situation occur to them based on a posting on social media is between approximately 32.02\% and 47.18\%.]{style='color:red'}     
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 2.
+
+::::{.panel-tabset}
+# Question
+
+According to pewresearch.org, a 2014 survey found that 32.1% of adults aged 18–34 were living with their parents. Suppose that this was based on a random sample of 1,200 adults in this age group.
+
+a. Check that the conditions for the CLT apply.
+b. Use the [app](https://ckaoxvii.github.io/sec_74_confidence_interval_app/) to find the confidence interval using confidence levels of 80\%, 90\%, 95\%, and 99\% to estimate the population proportion of all Americans in this age group who live with their parents.
+c. What happened to the confidence interval as the level of confidence increases?
+d. Is it plausible to conclude that the true percentage of adults in this age group living with parents is 38\%?
+
+# Answer
+
+[a. The sample is random and independent. Since $n\hat{p} = 1200 \times 0.321 = 385.2 \geqslant 10$ and $n(1-\hat{p}) = 1200 \times (1-0.321) = 814.8 \geqslant 10$, the sample size is sufficiently large. The population is sufficiently large since the population of adults aged 18–34 is much larger than 10 times the sample size.]{style='color:red'}<br>
+[b. ]{style='color:red'}
+[c. As the level of confidence increases, the confidence interval becomes wider.]{style='color:red'}<br>
+[d. We are 99\% confident that the true percentage is between 28.6\% and 35.6\%. Because 38\% is not in this interval, it is not plausible that the true percentage is 38\%]{style='color:red'}
+::::
+:::
+
+:::{.callout-important appearance="default" icon="false"}
+# Important
+
+As the confidence level increase, the [**length**]{style='color:red'} of the confidence interval also increases.
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 3.
+
+::::{.panel-tabset}
+# Question
+
+A political consultant randomly surveys 500 voters in a district to see how many intend to vote for a certain candidate. Of the 500 voters surveyed, 265 indicate they will vote for the candidate. Use a 99\% confidence interval, should the consultant predict that the candidate will win the election? Why or why not? (He/she must obtain a simple majority of the votes.)
+
+a. Verify the conditions for the CLT.
+b. Construct a 99\% confidence interval.
+c. Summarize your results.
+
+# Answer
+
+[a. The sample is random and independent. Since $n\hat{p} = 500 \times 0.53 = 265 \geqslant 10$ and $n(1-\hat{p}) = 500 \times (1-0.53) = 235 \geqslant 10$, the sample size is sufficiently large. The population is sufficiently large since the population of voters in the district is much larger than 10 times the sample size.]{style='color:red'}<br>
+[b. To construct a 99\% confidence interval, we use $z^\ast = 2.576$. The standard error is estimated as
+$$
+\text{SE}_{\text{est}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.53(1-0.53)}{500}} \approx 0.0223.
+$$ The margin of error is
+$$
+m = z^\ast \cdot \text{SE}_{\text{est}} = 2.576 \times 0.0223 \approx 0.0574.
+$$ The lower bound of the confidence interval is
+$$
+\hat{p} - m = 0.53 - 0.0574 \approx 0.4726.
+$$ The upper bound of the confidence interval is
+$$
+\hat{p} + m = 0.53 + 0.0574  \approx 0.5874.
+$$ Thus, the 99\% confidence interval is
+$$
+(0.4726, \; 0.5874).
+$$]{style='color:red'}<br>
+[c. The consultant should only predict a win if the confidence interval only contains values that are greater than 50\%. Since the confidence interval includes values less than 0.5, it is not certain that the candidate will win the election.]{style='color:red'}
+::::
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 4.
+
+::::{.panel-tabset}
+# Question
+
+According to housingwire.com, 93.8\% of homeowners had “positive equity” in their homes. Suppose that the margin of sampling error is $\pm 3$ percentage points with a confidence level of 95\%.
+
+a. State the confidence interval in interval notation.
+b. How would you interpret this confidence interval?
+
+# Answer
+
+[a. Note that $p = 0.938$ and the margin of error is $m = 0.03$. Thus, the confidence interval is]{style='color:red'}
+[$$
+(0.938 - 0.03, 0.938 + 0.03) = (0.908, \; 0.968).
+$$]{style='color:red'}
+[b. We are 95\% confident that the true proportion of all homeowners who have positive equity in their homes is between 90.8\% and 96.8\%.]{style='color:red'}
+::::
+:::
+
+## Section 7.5. Comparing Two Population Proportions with Confidence Intervals
+
+:::{.callout-note appearance="default" icon="false"}
+# Sample Proportions
+
+1. Even if two [**population**]{style='color:red'} proportions are different, the [**sample**]{style='color:red'} proportions drawn from these populations are usually different.
+2. Confidence intervals are one method for determining whether different sample proportions indicate there are “real” differences in the population proportions.
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Basic Approach
+
+1. Our comparison of two population proportions will be based on the sample statistic: [**$\hat{p}_1 - \hat{p}_2$**]{style='color:red'}.
+
+2. This statistic is used to estimate the difference between two population proportions: [**$p_1 - p_2$**]{style='color:red'}.
+
+3. Find a confidence interval for the difference in proportions: $p_1 - p_2$.
+
+4. Check whether [**0**]{style='color:red'} is included in the confidence interval.
+
+5. Interpreting the confidence interval using the table below:
+
+| Interval | Interpretation                                                       |
+|----------|----------------------------------------------------------------------|
+| $(-,+)$  | The interval contains 0, so the population proportions may be equal. |
+| $(+,+)$  | The population proportions are different, and [$p_1 > p_2$]{style='color:red'}. |
+| $(-,-)$  | The population proportions are different, and [$p_1 < p_2$]{style='color:red'}. |
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# General Method
+
+The confidence interval for two proportions has the same structure as the confidence interval for one proportion
+[$$
+  \text{Statistic} \pm z^\ast \times \text{SE}_{\text{est}},
+$$]{style='color:red'}
+where
+[$$
+  \text{SE}_\text{est} = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.
+$$]{style='color:red'}
+And $z^\ast$ is chosen to correspond to the desired confidence level, as we did for one proportion. Putting the two equations together, we have
+[$$
+  (\hat{p}_1 - \hat{p}_2) \pm z^\ast \times \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.
+$$]{style='color:red'}
+:::
+
+:::{.callout-note appearance="default" icon="false"}
+# Necessary Conditions for Comparing Two Proportions
+
+1. Random and independent samples. Both samples are randomly drawn from their respective populations and are independent of each other.
+2. Large samples. Both sample sizes are large enough that each sample expects at least 10 successes and 10 failures. That is,
+[$$
+\begin{align*}
+\text{Sample 1:} \quad & n_1\hat{p}_1 \geqslant 10, \quad n_1(1-\hat{p}_1) \geqslant 10, \\
+\text{Sample 2:} \quad & n_2\hat{p}_2 \geqslant 10, \quad n_2(1-\hat{p}_2) \geqslant 10.
+\end{align*}
+$$]{style='color:red'}
+3. Large populations. If the sampling is done without replacement, both populations must be at least 10 times larger than their respective sample sizes.4
+4. The two samples are independent of each other.
+:::
+
+:::{.callout-tip appearance="default" icon="false"}
+# Example 7.5.1.
+
+::::{.panel-tabset}
+# Question
+
+A June 2025 poll asking opinions on the GOP’s budget and tax bill was conducted by Pew Research. Pollsters found that 77\% of Democrats surveyed believed the bill would hurt middle-income earners, while only 52\% of Republicans felt the same way. Suppose that 540 Democrats were surveyed and 537 Republicans were surveyed.
+
+a. Identify the two populations.
+b. If we let sample 1 represent the Democrats, what does 540 represent in words and symbols?
+c. What does 77\% represent in words and symbols?
+d. If we let sample 2 represent the Republicans, what does 537 represent in words and symbols?
+e. What does 52\% represent in words and symbols?
+f. Check the conditions for comparing two proportions.
+g. How many of those Democrates surveyed believed the bill will hurt middle-income earners?
+h. How many of those Republicans surveyed believed the bill will hurt middle-income earners?
+i. Use the [webapp](https://ckaoxvii.github.io/sec_75_conf_int_two_pops_app/){.external target="_blank"} to find a 95\% confidence interval for the difference in population proportions.
+j. Complete the following table.
+
+| Difference | Count 1 | Total 1 | Count 2 | Total 2 | Sample Difference | Standard Error | Lower Limit | Upper Limit |
+|------------|---------|---------|---------|---------|-------------------|----------------|-------------|-------------|
+|            |         |         |         |         |                   |                |             |             |
+
+k. Does the confidence interval contain 0?
+l. Is there reason to believe that the population proportion of Republicans and Democrats who believe the bill will hurt the middle-class is significantly different?
+m. Interpret the confidence interval.
+
+# Answer
+
+[a. The two populations are Democrats and Republicans in the United States.]{style='color:red'}<br>
+[b. The 540 represents the sample size of Democrats surveyed, denoted as $n_1 = 540$.]{style='color:red'}<br>
+[c. The 77\% represents the sample proportion of Democrats who believe the bill will hurt middle-income earners, denoted as $\hat{p}_1 = 0.77$.]{style='color:red'}<br>
+[d. The 537 represents the sample size of Republicans surveyed, denoted as $n_2 = 537$.]{style='color:red'}<br>
+[e. The 52\% represents the sample proportion of Republicans who believe the bill will hurt middle-income earners, denoted as $\hat{p}_2 = 0.52$.]{style='color:red'}<br>
+[f. Conditions:
+1. Both samples are random and independent.
+2. Both sample sizes are large enough since $n_1\hat{p}_1 = 540 \times 0.77 = 415.8 \geqslant 10$, $n_1(1-\hat{p}_1) = 540 \imes (1-0.77) = 124.2 \geqslant 10, $n_2\hat{p}_2 = 537 \times 0.52 = 279.24 \geqslant 10$, and $n_2(1-\hat{p}_2) = 537 \times (1-0.52) = 257.76 \geqslant 10$.
+3. Both populations are sufficiently large since the populations of Democrats and Republicans in the United States are much larger than 10 times their respective sample sizes.
+4. The two samples are independent of each other.]{style='color:red'}<br>
+[g. The number of Democrats surveyed who believed the bill will hurt middle-income earners is
+$$
+\text{Count 1} = n_1 \times \hat{p}_1 = 540 \times 0.77 = 415.8 \approx 416.
+$$]{style='color:red'}<br>
+[h. The number of Republicans surveyed who believed the bill will hurt middle-income earners is
+$$
+\text{Count 2} = n_2 \times \hat{p}_2 = 537 \times 0.52 = 279.24 \approx 279.
+$$]{style='color:red'}<br>
+[i. Using the webapp, the 95\% confidence interval for the difference in population proportions is approximately (0.186, 0.314).]{style='color:red'}<br>
+[j. The completed table is as follows:
+| Difference | Count 1 | Total 1 | Count 2 | Total 2 | Sample Difference | Standard Error | Lower Limit | Upper Limit |
+|------------|---------|---------|---------|---------|-------------------|----------------|-------------|-------------|
+$\hat{p}_1 - \hat{p}_2$ | 416 | 540 | 279 | 537 | 0.25 | 0.032 | 0.186 | 0.314 | 
+]{.style='color:red'}
+[k. No, the confidence interval does not contain 0.]{style='color:red'}<br>
+[l. Yes, there is reason to believe that the population proportion of Republicans and Democrats who believe the bill will hurt the middle-class is significantly different since the confidence interval does not contain 0.]{style='color:red'}<br>
+[m. We are 95\% confident that the true difference in the proportion of Democrats and Republicans who believe the bill will hurt middle-income earners is between approximately 18.6\% and 31.4\%, with Democrats being more likely to believe this than Republicans.]{style='color:red'}
 ::::
 :::
