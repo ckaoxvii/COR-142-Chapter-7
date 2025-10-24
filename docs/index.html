@@ -4056,6 +4056,7 @@ $font-family: "Atkinson Hyperlegible", sans-serif;</style>
   <li><a href="#section-7.3.-central-limit-theorem-for-sample-proportions" id="toc-section-7.3.-central-limit-theorem-for-sample-proportions" class="nav-link" data-scroll-target="#section-7.3.-central-limit-theorem-for-sample-proportions">Section 7.3. Central Limit Theorem for Sample Proportions</a></li>
   <li><a href="#section-7.4.-estimating-the-population-proportion-with-confidence-intervals" id="toc-section-7.4.-estimating-the-population-proportion-with-confidence-intervals" class="nav-link" data-scroll-target="#section-7.4.-estimating-the-population-proportion-with-confidence-intervals">Section 7.4. Estimating the Population Proportion with Confidence Intervals</a></li>
   <li><a href="#section-7.4-examples" id="toc-section-7.4-examples" class="nav-link" data-scroll-target="#section-7.4-examples">Section 7.4 Examples</a></li>
+  <li><a href="#section-7.5.-comparing-two-population-proportions-with-confidence-intervals" id="toc-section-7.5.-comparing-two-population-proportions-with-confidence-intervals" class="nav-link" data-scroll-target="#section-7.5.-comparing-two-population-proportions-with-confidence-intervals">Section 7.5. Comparing Two Population Proportions with Confidence Intervals</a></li>
   </ul>
 </nav>
     </div>
@@ -5130,7 +5131,7 @@ Note
 <p>According to pewresearch.org, a 2014 survey found that 32.1% of adults aged 18–34 were living with their parents. Suppose that this was based on a random sample of 1,200 adults in this age group.</p>
 <ol type="a">
 <li>Check that the conditions for the CLT apply.</li>
-<li>Use the <a href="https://shinylive.io/r/editor/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IdJiw71OY4RBEBXWgAIAPAFolqKAHM4AfU60AJnHot2IpUtK1S1OEoC8SoWADCJAGbGKBBwEkyOEYANyhqJTdwgnlqKFIiRiVPRKUABUYiVESbEk5XXEslQxMzJOcS03Miqwh5eEZaAkDUeVILCCsulzBOWFR7PVRM1AKartcAZX77dJGc2hIldlRAIGABRDHO7qUw6nkHZwAGDABWQu3umD4nJSOLnaUYKAAPW4BGB53OclRbk6O73GAi+tXqwSaLTaHUerj6MAG+kMAC84FtYWBpgjZpNaKjlhANuidnsDh8jvdxlZrp1nJ8qcVfh9gaClHUGpCIK12gzXMQIN4TBA-Hp7CE4NRid1XB4BT5hQ4ADJwcURdgAUiJeAZpMOSgAnOcGTSPqzqa9bvr9Rh9WbGXA-scMEDLkpZFYQUUigQWEYYV0fYwjHpuHAoCZGBYwFg4JxYqR8mBPa7A8H6EQjBwGdwACxRyakKAQIy+pQAUUYmUYrmTj3FjDMNhgABU4C9SAB5NrcqM-IsloN6YJVmt2pjsWs7XNR2WC3wBIKhcKjnXBRu0Fttzvd6F8rzykV8chLyVJseRyfdaeuQLH4ZwQu5ORnhnkdtd0g91xH4L3x+LZ93S6IDZFkEROGCetVA0Tx5GFJ92D4blcCUIgd1IAQlBAL1tgAYkiaJYniBw+2LUth0SIpSIHYMKKSdQlEYMMCBscV2Gw11UBDeJoKUJC2gAEnhREhhGcZOgY-jSCEmYkTxNFXXGfCC37cjK1SFJGBgIjEGKABHRh2jWdh3jUNYBAAekJcYIN4zgDKM7jSCUAAqZZ3iUDQuO4eJMIstkgKsJjSHkRgIC4OAgIAXyAop8KiagYjicglH5OcFT4xc9m9fchUPLLwl4pioBY2g2I47pvJ4ySuUE4TBmGLJxjS0UVQlXipIEtKD30MV2v894KRshwGOo30h3Ui9xiUgjEqIlKCEaGwfQiXVlmRNROGIJjAqUcJUB83iPI0Fq+slV1kT0RbbCaQqGL0iBEhgEzPL26gDqgCyACZdpmhKkuIp4WG0G4iE8JQ6PGZ5GBBiAJqrXjLuu5bCrciDptdeLCOShxuryhwfxPJR0zgox8ldagiAAd2CPQSeLXiqucjRodh+HKNdeR0Fp+mjEZpylAAaiBmG+HZ6tFMx8sIDjJjibQ4tOD2uWqdsXhOmAe4lHeABdcZKZpxg6YVvmGOeF52C1g2eZN3audQG3Sd4mkTJQ+3HeLX7XWC0LwoIdhraN3m3e5oPbei2K8KUD9uUZVSgwhyaijQz86sLMjBzooqKAjVt23Y4a7PTmjxYncYtB+OAjnzMtbgKRiTYilCADYBAjnCrHwmO2lS3L50y49su2FPuS6vuFT0Qm9mz4tgjz9oKoDZQGLx+dJ4K6gy5TLxWtVDrauk1eJ7O8uoEr6vTra6gUNcdVIn8XSoxQzJSfYAhaGAXWUJzEEehvvAG6v3fsAL6Otv6-xrJA7YMUO5KC7uhAev5grxAAsndCAlCZ-hQUsBiTFZ6MHngXbeApd7tRqqPI+IoT4pmXidce+VB7hC3pVM+5Bq6uAAOoOBYA4eul9VT-zvkfZypAfIiNDNYRgZJsitGSgBTQ8xDLyKlI8Kwrg6CxmJg+GmFA-6AOLG-D+X8lA-3-ntBm9cX4GOAaA8B-8MBQKsDAiAUURDgXVqwAAgugdgihbiKBQhBUIwRbhBPrLIMAUUdZAA:w">app</a> to find the confidence interval using confidence levels of 80%, 90%, 95%, and 99% to estimate the population proportion of all Americans in this age group who live with their parents.</li>
+<li>Use the <a href="https://ckaoxvii.github.io/sec_74_confidence_interval_app/">app</a> to find the confidence interval using confidence levels of 80%, 90%, 95%, and 99% to estimate the population proportion of all Americans in this age group who live with their parents.</li>
 <li>What happened to the confidence interval as the level of confidence increases?</li>
 <li>Is it plausible to conclude that the true percentage of adults in this age group living with parents is 38%?</li>
 </ol>
@@ -5217,6 +5218,195 @@ m = z^\ast \cdot \text{SE}_{\text{est}} = 2.576 \times 0.0223 \approx 0.0574.
 <p><span style="color:red">a. Note that <span class="math inline">\(p = 0.938\)</span> and the margin of error is <span class="math inline">\(m = 0.03\)</span>. Thus, the confidence interval is</span> <span style="color:red"><span class="math display">\[
 (0.938 - 0.03, 0.938 + 0.03) = (0.908, \; 0.968).
 \]</span></span> <span style="color:red">b. We are 95% confident that the true proportion of all homeowners who have positive equity in their homes is between 90.8% and 96.8%.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7.5.-comparing-two-population-proportions-with-confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="section-7.5.-comparing-two-population-proportions-with-confidence-intervals">Section 7.5. Comparing Two Population Proportions with Confidence Intervals</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sample Proportions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Even if two <span style="color:red"><strong>population</strong></span> proportions are different, the <span style="color:red"><strong>sample</strong></span> proportions drawn from these populations are usually different.</li>
+<li>Confidence intervals are one method for determining whether different sample proportions indicate there are “real” differences in the population proportions.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Basic Approach
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Our comparison of two population proportions will be based on the sample statistic: <span style="color:red"><strong><span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span></strong></span>.</p></li>
+<li><p>This statistic is used to estimate the difference between two population proportions: <span style="color:red"><strong><span class="math inline">\(p_1 - p_2\)</span></strong></span>.</p></li>
+<li><p>Find a confidence interval for the difference in proportions: <span class="math inline">\(p_1 - p_2\)</span>.</p></li>
+<li><p>Check whether <span style="color:red"><strong>0</strong></span> is included in the confidence interval.</p></li>
+<li><p>Interpreting the confidence interval using the table below:</p></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 87%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((-,+)\)</span></td>
+<td>The interval contains 0, so the population proportions may be equal.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((+,+)\)</span></td>
+<td>The population proportions are different, and <span style="color:red"><span class="math inline">\(p_1 &gt; p_2\)</span></span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((-,-)\)</span></td>
+<td>The population proportions are different, and <span style="color:red"><span class="math inline">\(p_1 &lt; p_2\)</span></span>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>General Method
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The confidence interval for two proportions has the same structure as the confidence interval for one proportion <span style="color:red"><span class="math display">\[
+  \text{Statistic} \pm z^\ast \times \text{SE}_{\text{est}},
+\]</span></span> where <span style="color:red"><span class="math display">\[
+  \text{SE}_\text{est} = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.
+\]</span></span> And <span class="math inline">\(z^\ast\)</span> is chosen to correspond to the desired confidence level, as we did for one proportion. Putting the two equations together, we have <span style="color:red"><span class="math display">\[
+  (\hat{p}_1 - \hat{p}_2) \pm z^\ast \times \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.
+\]</span></span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Necessary Conditions for Comparing Two Proportions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Random and independent samples. Both samples are randomly drawn from their respective populations and are independent of each other.</li>
+<li>Large samples. Both sample sizes are large enough that each sample expects at least 10 successes and 10 failures. That is, <span style="color:red"><span class="math display">\[
+\begin{align*}
+\text{Sample 1:} \quad &amp; n_1\hat{p}_1 \geqslant 10, \quad n_1(1-\hat{p}_1) \geqslant 10, \\
+\text{Sample 2:} \quad &amp; n_2\hat{p}_2 \geqslant 10, \quad n_2(1-\hat{p}_2) \geqslant 10.
+\end{align*}
+\]</span></span></li>
+<li>Large populations. If the sampling is done without replacement, both populations must be at least 10 times larger than their respective sample sizes.4</li>
+<li>The two samples are independent of each other.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example 7.5.1.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-21-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-1" role="tab" aria-controls="tabset-21-1" aria-selected="true" href>Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-21-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-2" role="tab" aria-controls="tabset-21-2" aria-selected="false" href>Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-21-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-21-1-tab">
+<p>A June 2025 poll asking opinions on the GOP’s budget and tax bill was conducted by Pew Research. Pollsters found that 77% of Democrats surveyed believed the bill would hurt middle-income earners, while only 52% of Republicans felt the same way. Suppose that 540 Democrats were surveyed and 537 Republicans were surveyed.</p>
+<ol type="a">
+<li>Identify the two populations.</li>
+<li>If we let sample 1 represent the Democrats, what does 540 represent in words and symbols?</li>
+<li>What does 77% represent in words and symbols?</li>
+<li>If we let sample 2 represent the Republicans, what does 537 represent in words and symbols?</li>
+<li>What does 52% represent in words and symbols?</li>
+<li>Check the conditions for comparing two proportions.</li>
+<li>How many of those Democrates surveyed believed the bill will hurt middle-income earners?</li>
+<li>How many of those Republicans surveyed believed the bill will hurt middle-income earners?</li>
+<li>Use the <a href="https://ckaoxvii.github.io/sec_75_conf_int_two_pops_app/" class="external" target="_blank">webapp</a> to find a 95% confidence interval for the difference in population proportions.</li>
+<li>Complete the following table.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 17%">
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Difference</th>
+<th>Count 1</th>
+<th>Total 1</th>
+<th>Count 2</th>
+<th>Total 2</th>
+<th>Sample Difference</th>
+<th>Standard Error</th>
+<th>Lower Limit</th>
+<th>Upper Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="11" type="a">
+<li>Does the confidence interval contain 0?</li>
+<li>Is there reason to believe that the population proportion of Republicans and Democrats who believe the bill will hurt the middle-class is significantly different?</li>
+<li>Interpret the confidence interval.</li>
+</ol>
+</div>
+<div id="tabset-21-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-21-2-tab">
+<p><span style="color:red">a. The two populations are Democrats and Republicans in the United States.</span><br> <span style="color:red">b. The 540 represents the sample size of Democrats surveyed, denoted as <span class="math inline">\(n_1 = 540\)</span>.</span><br> <span style="color:red">c. The 77% represents the sample proportion of Democrats who believe the bill will hurt middle-income earners, denoted as <span class="math inline">\(\hat{p}_1 = 0.77\)</span>.</span><br> <span style="color:red">d. The 537 represents the sample size of Republicans surveyed, denoted as <span class="math inline">\(n_2 = 537\)</span>.</span><br> <span style="color:red">e. The 52% represents the sample proportion of Republicans who believe the bill will hurt middle-income earners, denoted as <span class="math inline">\(\hat{p}_2 = 0.52\)</span>.</span><br> <span style="color:red">f. Conditions: 1. Both samples are random and independent. 2. Both sample sizes are large enough since <span class="math inline">\(n_1\hat{p}_1 = 540 \times 0.77 = 415.8 \geqslant 10\)</span>, $n_1(1-_1) = 540 (1-0.77) = 124.2 , <span class="math inline">\(n_2\hat{p}_2 = 537 \times 0.52 = 279.24 \geqslant 10\)</span>, and <span class="math inline">\(n_2(1-\hat{p}_2) = 537 \times (1-0.52) = 257.76 \geqslant 10\)</span>. 3. Both populations are sufficiently large since the populations of Democrats and Republicans in the United States are much larger than 10 times their respective sample sizes. 4. The two samples are independent of each other.</span><br> <span style="color:red">g. The number of Democrats surveyed who believed the bill will hurt middle-income earners is <span class="math display">\[
+\text{Count 1} = n_1 \times \hat{p}_1 = 540 \times 0.77 = 415.8 \approx 416.
+\]</span></span><br> <span style="color:red">h. The number of Republicans surveyed who believed the bill will hurt middle-income earners is <span class="math display">\[
+\text{Count 2} = n_2 \times \hat{p}_2 = 537 \times 0.52 = 279.24 \approx 279.
+\]</span></span><br> <span style="color:red">i. Using the webapp, the 95% confidence interval for the difference in population proportions is approximately (0.186, 0.314).</span><br> [j. The completed table is as follows: | Difference | Count 1 | Total 1 | Count 2 | Total 2 | Sample Difference | Standard Error | Lower Limit | Upper Limit | |————|———|———|———|———|——————-|—————-|————-|————-| <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span> | 416 | 540 | 279 | 537 | 0.25 | 0.032 | 0.186 | 0.314 | ]{.style=‘color:red’} <span style="color:red">k. No, the confidence interval does not contain 0.</span><br> <span style="color:red">l. Yes, there is reason to believe that the population proportion of Republicans and Democrats who believe the bill will hurt the middle-class is significantly different since the confidence interval does not contain 0.</span><br> <span style="color:red">m. We are 95% confident that the true difference in the proportion of Democrats and Republicans who believe the bill will hurt middle-income earners is between approximately 18.6% and 31.4%, with Democrats being more likely to believe this than Republicans.</span></p>
 </div>
 </div>
 </div>
